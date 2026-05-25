@@ -137,15 +137,16 @@ function SevaSection() {
     <div
       style={{
         background: "#FFF8E7",
-        padding: "60px 20px",
+        padding: "80px 30px",
+        width: "100%",
       }}
     >
       <h1
         style={{
           textAlign: "center",
           color: "green",
-          marginBottom: "30px",
-          fontSize: "50px",
+          marginBottom: "40px",
+          fontSize: "60px",
         }}
       >
         {t.seva}
@@ -154,7 +155,7 @@ function SevaSection() {
       {token && (
         <div
           style={{
-            marginBottom: "30px",
+            marginBottom: "40px",
             display: "flex",
             flexWrap: "wrap",
             gap: "10px",
@@ -165,14 +166,14 @@ function SevaSection() {
             placeholder="Seva Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            style={{ padding: "10px" }}
+            style={{ padding: "12px" }}
           />
 
           <input
             placeholder="Image URL"
             value={image}
             onChange={(e) => setImage(e.target.value)}
-            style={{ padding: "10px" }}
+            style={{ padding: "12px" }}
           />
 
           <input
@@ -180,19 +181,20 @@ function SevaSection() {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             style={{
-              padding: "10px",
-              width: "300px",
+              padding: "12px",
+              width: "350px",
             }}
           />
 
           <button
             onClick={addSeva}
             style={{
-              padding: "10px 20px",
+              padding: "12px 24px",
               background: "green",
               color: "white",
               border: "none",
               cursor: "pointer",
+              borderRadius: "5px",
             }}
           >
             Add Seva
@@ -208,26 +210,27 @@ function SevaSection() {
             alignItems: "center",
             background: "white",
             border: "1px solid #ddd",
-            borderRadius: "10px",
-            padding: "40px",
-            boxShadow: "0px 2px 10px rgba(0,0,0,0.1)",
+            borderRadius: "15px",
+            padding: "70px",
+            boxShadow: "0px 2px 15px rgba(0,0,0,0.1)",
             width: "100%",
-            maxWidth: "1400px",
+            maxWidth: "1900px",
             margin: "auto",
-            gap: "40px",
+            gap: "70px",
             flexWrap: "wrap",
           }}
         >
           <div
             style={{
               flex: 1,
-              minWidth: "300px",
+              minWidth: "350px",
             }}
           >
             <h2
               style={{
-                fontSize: "50px",
-                marginBottom: "20px",
+                fontSize: "65px",
+                marginBottom: "30px",
+                color: "#111",
               }}
             >
               {seva.title}
@@ -235,7 +238,7 @@ function SevaSection() {
 
             <p
               style={{
-                fontSize: "24px",
+                fontSize: "30px",
                 lineHeight: "1.8",
                 color: "#555",
               }}
@@ -249,11 +252,12 @@ function SevaSection() {
                 background: "orange",
                 color: "white",
                 border: "none",
-                padding: "14px 30px",
-                borderRadius: "5px",
+                padding: "16px 35px",
+                borderRadius: "6px",
                 cursor: "pointer",
-                marginTop: "20px",
-                fontSize: "18px",
+                marginTop: "30px",
+                fontSize: "20px",
+                fontWeight: "bold",
               }}
             >
               Book Now
@@ -263,15 +267,16 @@ function SevaSection() {
               <button
                 onClick={() => deleteSeva(seva._id)}
                 style={{
-                  marginLeft: "10px",
+                  marginLeft: "15px",
                   background: "red",
                   color: "white",
                   border: "none",
-                  padding: "14px 30px",
-                  borderRadius: "5px",
+                  padding: "16px 35px",
+                  borderRadius: "6px",
                   cursor: "pointer",
-                  marginTop: "20px",
-                  fontSize: "18px",
+                  marginTop: "30px",
+                  fontSize: "20px",
+                  fontWeight: "bold",
                 }}
               >
                 Delete Seva
@@ -284,15 +289,20 @@ function SevaSection() {
             alt={seva.title}
             style={{
               width: "100%",
-              maxWidth: "500px",
-              height: "320px",
+              maxWidth: "750px",
+              height: "480px",
               objectFit: "cover",
-              borderRadius: "10px",
+              borderRadius: "15px",
             }}
           />
         </div>
       ) : (
-        <p style={{ textAlign: "center" }}>
+        <p
+          style={{
+            textAlign: "center",
+            fontSize: "25px",
+          }}
+        >
           No Sevas Added
         </p>
       )}
@@ -300,57 +310,66 @@ function SevaSection() {
       {showForm && (
         <div
           style={{
-            marginTop: "30px",
+            marginTop: "40px",
             background: "white",
-            padding: "25px",
-            borderRadius: "10px",
+            padding: "30px",
+            borderRadius: "12px",
             border: "1px solid #ddd",
-            maxWidth: "1000px",
+            maxWidth: "1100px",
             marginInline: "auto",
           }}
         >
-          <h2>Book Seva: {seva?.title}</h2>
+          <h2
+            style={{
+              marginBottom: "20px",
+            }}
+          >
+            Book Seva: {seva?.title}
+          </h2>
 
           <div
             style={{
               display: "flex",
               flexWrap: "wrap",
-              gap: "10px",
+              gap: "15px",
             }}
           >
             <input
               placeholder="Your Name"
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
-              style={{ padding: "10px" }}
+              style={{ padding: "12px" }}
             />
 
             <input
               placeholder="Phone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              style={{ padding: "10px" }}
+              style={{ padding: "12px" }}
             />
 
             <input
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              style={{ padding: "10px" }}
+              style={{ padding: "12px" }}
             />
 
             <input
               type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
-              style={{ padding: "10px" }}
+              style={{ padding: "12px" }}
             />
 
             <input
               placeholder="Message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              style={{ padding: "10px", width: "300px" }}
+              style={{
+                padding: "12px",
+                width: "350px",
+              }}
             />
           </div>
 
@@ -360,9 +379,10 @@ function SevaSection() {
               background: "green",
               color: "white",
               border: "none",
-              padding: "10px 20px",
+              padding: "12px 25px",
               cursor: "pointer",
-              marginTop: "20px",
+              marginTop: "25px",
+              borderRadius: "5px",
             }}
           >
             Submit Booking
@@ -374,80 +394,15 @@ function SevaSection() {
               background: "gray",
               color: "white",
               border: "none",
-              padding: "10px 20px",
+              padding: "12px 25px",
               cursor: "pointer",
               marginLeft: "10px",
-              marginTop: "20px",
+              marginTop: "25px",
+              borderRadius: "5px",
             }}
           >
             Cancel
           </button>
-        </div>
-      )}
-
-      {token && (
-        <div
-          style={{
-            marginTop: "40px",
-            background: "white",
-            padding: "20px",
-            maxWidth: "1200px",
-            marginInline: "auto",
-            borderRadius: "10px",
-          }}
-        >
-          <h2 style={{ color: "green" }}>
-            Seva Bookings
-          </h2>
-
-          {bookings.map((booking) => (
-            <div
-              key={booking._id}
-              style={{
-                border: "1px solid #ddd",
-                padding: "15px",
-                marginBottom: "10px",
-                borderRadius: "8px",
-              }}
-            >
-              <p>
-                <b>Name:</b> {booking.name}
-              </p>
-
-              <p>
-                <b>Phone:</b> {booking.phone}
-              </p>
-
-              <p>
-                <b>Email:</b> {booking.email}
-              </p>
-
-              <p>
-                <b>Seva:</b> {booking.sevaName}
-              </p>
-
-              <p>
-                <b>Date:</b> {booking.date}
-              </p>
-
-              <p>
-                <b>Message:</b> {booking.message}
-              </p>
-
-              <button
-                onClick={() => deleteBooking(booking._id)}
-                style={{
-                  background: "red",
-                  color: "white",
-                  border: "none",
-                  padding: "8px 15px",
-                  cursor: "pointer",
-                }}
-              >
-                Delete Booking
-              </button>
-            </div>
-          ))}
         </div>
       )}
     </div>
