@@ -7,12 +7,16 @@ function AdminLogin() {
 
   const loginAdmin = async () => {
     try {
-      const res = await axios.post("http://https://gaushala-project-600k.onrender.com/admin/login", {
-        username: username.trim(),
-        password: password.trim(),
-      });
+      const res = await axios.post(
+        "https://gaushala-project-600k.onrender.com/admin/login",
+        {
+          username: username.trim(),
+          password: password.trim(),
+        }
+      );
 
       localStorage.setItem("token", res.data.token);
+
       alert("Login Success");
 
       window.location.href = "/";
@@ -49,7 +53,11 @@ function AdminLogin() {
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          style={{ width: "100%", padding: "12px", marginBottom: "15px" }}
+          style={{
+            width: "100%",
+            padding: "12px",
+            marginBottom: "15px",
+          }}
         />
 
         <input
@@ -57,7 +65,11 @@ function AdminLogin() {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          style={{ width: "100%", padding: "12px", marginBottom: "20px" }}
+          style={{
+            width: "100%",
+            padding: "12px",
+            marginBottom: "20px",
+          }}
         />
 
         <button
