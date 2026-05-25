@@ -27,7 +27,7 @@ function App() {
   useEffect(() => {
 
     axios
-      .get("http://https://gaushala-project-60ok.onrender.com")
+      .get("https://gaushala-project-60ok.onrender.com")
       .then((res) => {
         console.log(res.data);
       });

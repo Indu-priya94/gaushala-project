@@ -24,7 +24,7 @@ function Gallery() {
     try {
 
       const res = await axios.get(
-        "http://https://gaushala-project-60ok.onrender.com/gallery"
+        "https://gaushala-project-60ok.onrender.com/gallery"
       );
 
       setGallery(res.data);
@@ -53,7 +53,7 @@ function Gallery() {
     try {
 
       await axios.post(
-        "http://https://gaushala-project-60ok.onrender.com/gallery/add",
+        "https://gaushala-project-60ok.onrender.com/gallery/add",
         {
           image,
         }
@@ -82,7 +82,7 @@ function Gallery() {
     try {
 
       await axios.delete(
-        `http://https://gaushala-project-60ok.onrender.com/gallery/${id}`
+        `https://gaushala-project-60ok.onrender.com/gallery/${id}`
       );
 
       fetchImages();

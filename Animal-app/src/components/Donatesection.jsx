@@ -31,7 +31,7 @@ function Donatesection() {
     }
 
     await axios.post(
-      "http://https://gaushala-project-60ok.onrender.com/donation/add",
+      "https://gaushala-project-60ok.onrender.com/donation/add",
       {
         name,
         phone,
