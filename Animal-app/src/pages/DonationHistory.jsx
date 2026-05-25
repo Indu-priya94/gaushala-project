@@ -5,7 +5,7 @@ function DonationHistory() {
   const [donations, setDonations] = useState([]);
 
   const fetchDonations = async () => {
-    const res = await axios.get("http://https://gaushala-project-600k.onrender.com/donation");
+    const res = await axios.get("http://https://gaushala-project-60ok.onrender.com/donation");
     setDonations(res.data);
   };
 
@@ -20,7 +20,7 @@ function DonationHistory() {
 
     if (!confirmDelete) return;
 
-    await axios.delete(`http://https://gaushala-project-600k.onrender.com/donation/${id}`);
+    await axios.delete(`http://https://gaushala-project-60ok.onrender.com/donation/${id}`);
     fetchDonations();
   };
 

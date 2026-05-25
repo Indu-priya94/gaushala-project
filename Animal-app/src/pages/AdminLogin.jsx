@@ -8,7 +8,7 @@ function AdminLogin() {
   const loginAdmin = async () => {
     try {
       const res = await axios.post(
-        "https://gaushala-project-600k.onrender.com/admin/login",
+        "https://gaushala-project-60ok.onrender.com/admin/login",
         {
           username: username.trim(),
           password: password.trim(),

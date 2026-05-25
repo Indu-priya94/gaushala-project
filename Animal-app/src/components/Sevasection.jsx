@@ -23,12 +23,12 @@ function SevaSection() {
   const [message, setMessage] = useState("");
 
   const fetchSevas = async () => {
-    const res = await axios.get("http://https://gaushala-project-600k.onrender.com/seva");
+    const res = await axios.get("http://https://gaushala-project-60ok.onrender.com/seva");
     setSevas(res.data);
   };
 
   const fetchBookings = async () => {
-    const res = await axios.get("http://https://gaushala-project-600k.onrender.com/seva-booking");
+    const res = await axios.get("http://https://gaushala-project-60ok.onrender.com/seva-booking");
     setBookings(res.data);
   };
 
@@ -53,7 +53,7 @@ function SevaSection() {
       return;
     }
 
-    await axios.post("http://https://gaushala-project-600k.onrender.com/seva/add", {
+    await axios.post("http://https://gaushala-project-60ok.onrender.com/seva/add", {
       title,
       description,
       image,
@@ -69,7 +69,7 @@ function SevaSection() {
     const confirmDelete = window.confirm("Do you want to delete this seva?");
     if (!confirmDelete) return;
 
-    await axios.delete(`http://https://gaushala-project-600k.onrender.com/seva/${id}`);
+    await axios.delete(`http://https://gaushala-project-60ok.onrender.com/seva/${id}`);
     setCurrent(0);
     fetchSevas();
   };
@@ -80,7 +80,7 @@ function SevaSection() {
       return;
     }
 
-    await axios.post("http://https://gaushala-project-600k.onrender.com/seva-booking/add", {
+    await axios.post("http://https://gaushala-project-60ok.onrender.com/seva-booking/add", {
       name: userName,
       phone,
       email,
@@ -105,7 +105,7 @@ function SevaSection() {
     const confirmDelete = window.confirm("Do you want to delete this booking?");
     if (!confirmDelete) return;
 
-    await axios.delete(`http://https://gaushala-project-600k.onrender.com/seva-booking/${id}`);
+    await axios.delete(`http://https://gaushala-project-60ok.onrender.com/seva-booking/${id}`);
     fetchBookings();
   };
 

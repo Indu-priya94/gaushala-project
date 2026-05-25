@@ -29,7 +29,7 @@ function AdoptCow() {
     try {
 
       const res = await axios.get(
-        "http://https://gaushala-project-600k.onrender.com/cow"
+        "http://https://gaushala-project-60ok.onrender.com/cow"
       );
 
       setCows(res.data);
@@ -65,7 +65,7 @@ function AdoptCow() {
     try {
 
       await axios.post(
-        "http://https://gaushala-project-600k.onrender.com/cow/add",
+        "http://https://gaushala-project-60ok.onrender.com/cow/add",
         {
           name,
           dob,
@@ -104,7 +104,7 @@ function AdoptCow() {
     try {
 
       await axios.delete(
-        `http://https://gaushala-project-600k.onrender.com/cow/${id}`
+        `http://https://gaushala-project-60ok.onrender.com/cow/${id}`
       );
 
       fetchCows();
