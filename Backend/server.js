@@ -19,6 +19,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Test Route
+app.get("/", (req, res) => {
+  res.send("Backend Running Successfully");
+});
+
+// Admin test route
+app.get("/test-admin", (req, res) => {
+  res.send("Admin route test working");
+});
+
 // Routes
 app.use("/admin", adminRoutes);
 app.use("/gallery", galleryRoutes);
@@ -35,11 +45,6 @@ mongoose
   .connect(process.env.MONGO_URL)
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
-
-// Test Route
-app.get("/", (req, res) => {
-  res.send("Backend Running Successfully");
-});
 
 // Server Port
 const PORT = process.env.PORT || 5000;
