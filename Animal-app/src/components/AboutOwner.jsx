@@ -27,7 +27,7 @@ function AboutOwner() {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/founder"
+        "http://https://gaushala-project-600k.onrender.com/founder"
       );
 
       setFounders(res.data);
@@ -61,7 +61,7 @@ function AboutOwner() {
     try {
 
       await axios.post(
-        "http://localhost:5000/founder/add",
+        "http://https://gaushala-project-600k.onrender.com/founder/add",
         {
           name,
           role,
@@ -96,7 +96,7 @@ function AboutOwner() {
     try {
 
       await axios.delete(
-        `http://localhost:5000/founder/${id}`
+        `http://https://gaushala-project-600k.onrender.com/founder/${id}`
       );
 
       fetchFounders();

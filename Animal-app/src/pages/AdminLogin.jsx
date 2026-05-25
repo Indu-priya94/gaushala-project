@@ -7,7 +7,7 @@ function AdminLogin() {
 
   const loginAdmin = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/admin/login", {
+      const res = await axios.post("http://https://gaushala-project-600k.onrender.com/admin/login", {
         username: username.trim(),
         password: password.trim(),
       });

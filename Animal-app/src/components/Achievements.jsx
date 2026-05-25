@@ -12,7 +12,7 @@ function Achievements() {
   const [achievements, setAchievements] = useState([]);
 
   const fetchAchievements = async () => {
-    const res = await axios.get("http://localhost:5000/achievement");
+    const res = await axios.get("http://https://gaushala-project-600k.onrender.com/achievement");
     setAchievements(res.data);
   };
 
@@ -21,7 +21,7 @@ function Achievements() {
   }, []);
 
   const addAchievement = async () => {
-    await axios.post("http://localhost:5000/achievement/add", {
+    await axios.post("http://https://gaushala-project-600k.onrender.com/achievement/add", {
       title,
       description,
       image,
@@ -40,7 +40,7 @@ function Achievements() {
 
     if (!confirmDelete) return;
 
-    await axios.delete(`http://localhost:5000/achievement/${id}`);
+    await axios.delete(`http://https://gaushala-project-600k.onrender.com/achievement/${id}`);
     fetchAchievements();
   };
 

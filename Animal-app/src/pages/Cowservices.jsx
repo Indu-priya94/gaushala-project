@@ -18,7 +18,7 @@ function CowServices() {
   const [image, setImage] = useState("");
 
   const fetchServices = async () => {
-    const res = await axios.get("http://localhost:5000/cow-service");
+    const res = await axios.get("http://https://gaushala-project-600k.onrender.com/cow-service");
     setServices(res.data);
   };
 
@@ -32,7 +32,7 @@ function CowServices() {
       return;
     }
 
-    await axios.post("http://localhost:5000/cow-service/add", {
+    await axios.post("http://https://gaushala-project-600k.onrender.com/cow-service/add", {
       title,
       description,
       image,
@@ -52,7 +52,7 @@ function CowServices() {
 
     if (!confirmDelete) return;
 
-    await axios.delete(`http://localhost:5000/cow-service/${id}`);
+    await axios.delete(`http://https://gaushala-project-600k.onrender.com/cow-service/${id}`);
 
     fetchServices();
   };
